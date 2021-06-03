@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="personal.project.dictionary.DictionaryController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="400.0">
+         <children>
+            <TextField fx:id="search" layoutY="57.0" onKeyReleased="#update" prefHeight="40.0" prefWidth="400.0" promptText="Search any word" />
+            <ListView fx:id="results" layoutY="108.0" onMouseClicked="#getMeaning" prefHeight="237.0" prefWidth="400.0" />
+            <TextArea fx:id="definition" layoutY="388.0" prefHeight="212.0" prefWidth="400.0" />
+            <Label layoutY="345.0" prefHeight="40.0" prefWidth="400.0" text="Means:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="50.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#anhViet" prefHeight="50.0" prefWidth="190.0" text="Anh - Viet">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#vietAnh" prefHeight="50.0" prefWidth="190.0" text="Viet - Anh">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
