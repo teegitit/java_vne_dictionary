@@ -14,13 +14,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Main application class
+ */
 public class Dictionary extends Application {
 
+    //Launches the application
     public static void main(String[] args) {
-
         launch(args);
     }
 
+    //Sets up the stage and the scene
     @Override
     public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("dictionary.fxml"));

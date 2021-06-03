@@ -12,15 +12,30 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
+/**
+ * Functionalities class
+ */
 public class DictionaryFunc {
+    //The map to store the word and its definition
     private Map<String, String> map;
+    //The sorted set to store the word to be searched
     private SortedSet<String> words;
+    //String of the path to the dictionary file
     private String file = "src/personal/project/dictionary/vnedict.txt";
+
+    /**
+     * Constructor of the functionality class
+     * Initializes the hashmap and the set
+     */
     public DictionaryFunc(){
         map = new HashMap<>();
         words = new TreeSet<>();
     }
 
+    /**
+     * Reads and store the word and definition into the hash map, set
+     * @throws IOException if the file cannot be loaded
+     */
     public void loadAnhViet() throws IOException{
         words.clear();
         List<String> lines = Files.readAllLines(Paths.get(file));
@@ -36,6 +51,10 @@ public class DictionaryFunc {
         }
     }
 
+    /**
+     * Reads and store the word and definition into the hash map, set
+     * @throws IOException if the file cannot be loaded
+     */
     public void loadVietAnh() throws IOException{
         words.clear();
         List<String> lines = Files.readAllLines(Paths.get(file));
